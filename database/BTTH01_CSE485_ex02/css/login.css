@@ -1,0 +1,36 @@
+.form{
+    margin: 5px;
+}
+.sign-in{
+    width: 100vh;
+    height: auto;
+    align-items: center;
+}
+
+.form-group-user{
+    width: 80%;
+    height: 2.7rem;
+    padding: 5px;
+}
+
+ .icon{
+    color:var(--primary);
+    background-color: white;
+    height:2rem;
+    width:2.2rem;
+    /* padding-left:1rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+    border-start-start-radius: 0.3rem;
+    border-end-start-radius: 0.3rem;
+} 
+
+.form-control-user{
+    border-radius:0;
+    border:none;
+    border-end-end-radius: 0.3rem;
+    border-start-end-radius: 0.3rem;
+}
+
