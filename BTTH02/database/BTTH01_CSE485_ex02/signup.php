@@ -29,8 +29,8 @@
                             }
                         ?>
                     <div class="form-login bg-secondary" id="form_login">
-                        <form class="form-group-login" action="process_login.php" method="post">
-                            <p style="font-size:40px; color: white;">Sign In</p>
+                        <form class="form-group-login" action="register.php" method="post">
+                            <p style="font-size:40px; color: white;">Sign Up</p>
                             <hr>
                             <div id="liveAlertPlaceholder"></div>
                             <div class="input-group mb-3">
@@ -38,21 +38,22 @@
                                 <input type="text" class="form-control" placeholder="username" name="username">
                             </div>
                             <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope-fill"></i></span>
+                                <input type="email" class="form-control" placeholder="email" name="email">
+                            </div>
+                            <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-key-fill"></i></span>
-                                <input type="password" class="form-control" placeholder="password" name="password">
+                                <input type="password" class="form-control" placeholder="password" name="pass1">
                             </div>
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" name="" id="exampleCheck1" class="form-check-input">
-                                <p>Remember Me</p>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-key-fill"></i></span>
+                                <input type="password" class="form-control" placeholder="re-type password" name="pass2">
                             </div>
+                            
                             <div class="d-flex justify-content-end">
-                                <button class="btn btn-warning mb-5" type="submit" name="sbmLogin">Log In</button>
+                                <button class="btn btn-warning mb-5" type="submit" name="sbmLogin">Sign up</button>
                             </div>
-                            <div class="text-center c-warning" >
-                                <hr> 
-                                <p>Don't have an account? <a href="signup.php" style="text-decoration: none; color: #FFC107;">Sign up</a></p>
-                                <p><a href="forgotPass.php" style="text-decoration: none; color: #FFC107; ">Forgot your password?</a></p>
-                            </div>
+                            
                         </form>
                     </div>
                     

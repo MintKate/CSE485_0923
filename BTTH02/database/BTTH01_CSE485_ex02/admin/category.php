@@ -32,6 +32,7 @@
 
         <div class="main" >
             <div class="table-form" style="margin-bottom: 30px; margin-top: 30px;">
+                <h3 class=" text-center text-uppercase">Thể loại</h3>
                 <a href="add_category.php" class="btn btn-success"> Thêm mới </a>
                 <table class="table ">
                     <thead>
@@ -75,7 +76,7 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                    <a href="user_delete.php?id=<?= $kind[0]; ?>" class="btn btn-success">OK</a>
+                                                    <a href="delete_category.php?id=<?= $kind[0]; ?>" class="btn btn-success">OK</a>
                                                 </div>
                                             </div>
                                         </div>

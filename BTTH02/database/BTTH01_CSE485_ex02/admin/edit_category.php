@@ -1,18 +1,24 @@
 <?php
+if(isset($_GET['id'])){
+    $tid = $_GET['id'];
+
     try{
-        //Buoc 1: Mo ket noi
-        $conn = new PDO("mysql:host=localhost;dbname=btth01_ex02", "root","Kt162003");
+        //Buoc 1: Ket noi DBServer
+        $conn = new PDO("mysql:host=localhost;dbname=btth01_ex02", "root", "Kt162003");
         //Buoc 2: Thuc hien truy van
-        $sql = "SELECT * FROM theloai";
-        //    $conn->query($sql);
-        $stmt = $conn->prepare($sql);
+        $sql_check = "SELECT * FROM theloai WHERE ma_tloai='$tid'";
+        $stmt = $conn->prepare($sql_check);
         $stmt->execute();
 
-        //Buoc 3: Xu ly ket qua
-        $kinds = $stmt->fetchAll();
+        //Buoc 3: Xử lý kết quả
+        if($stmt->rowCount()>0){
+            $tloai = $stmt->fetch();
+        }
+
     }catch(PDOException $e){
-        echo "Error: ".$e->getMessage();
+        echo $e->getMessage();
     }
+}
 ?>
 
 <!DOCTYPE html>
@@ -32,19 +38,21 @@
 
         <div class="main" style="margin-bottom: 50px; margin-top: 30px; text-align:center;">
             <h3>SỬA THÔNG TIN THỂ LOẠI</h3>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Mã thể loại</span>
-                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1"> 
-            </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Tên thể loại</span>
-                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-            </div>
-            <div class="enter d-flex justify-content-end">
-                <a href="#" class="btn btn-success mx-sm-2"> Lưu lại </a>
-                <a href="category.php" class="btn btn-warning"> Quay lại </a>
-            </div>
-           
+            <form action="process_edit_category.php" method="post">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Mã thể loại</span>
+                    <input type="text" name="tid" id="" class="form-control" value="<?= $tloai[0]; ?>" readonly>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Tên thể loại</span>
+                    <input type="text" name="tenTloai" id="" class="form-control" value="<?= $tloai[1]; ?>">
+                </div>
+                <div class="enter d-flex justify-content-end">
+                    <button type="submit" class="btn btn-success mx-2" name="sbmSave">Lưu lại</button>
+                    <a href="category.php" class="btn btn-warning"> Quay lại </a>
+                </div>
+            </form>
+        
         </div>
         
 
