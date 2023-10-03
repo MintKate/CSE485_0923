@@ -1,0 +1,32 @@
+.form-searchs{
+    width:15rem;
+}
+.icon-search{
+    color:var(--primary);
+    background-color: white;
+    height:2.2rem;
+    width:2.2rem;
+    padding-left:1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+    border-start-start-radius: 0.3rem;
+    border-end-start-radius: 0.3rem;
+}
+.icon-search i{
+    margin-bottom:0.3rem;
+}
+.form-searchs .form-control{
+    border-radius:0;
+    border:none;
+    border-end-end-radius: 0.3rem;
+    border-start-end-radius: 0.3rem;
+}
+.form-searchs .form-control:focus{
+    outline:none;
+    box-shadow:none;
+}
+.fix_point{
+    width:70%;
+}
