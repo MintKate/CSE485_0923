@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,38 +21,43 @@
         <div class="main">
             <div class="form d-flex justify-content-center">
                 <div class="sign-in bg-secondary">
-                    <p class="text-light">Sign in</p>  
+                    <p class="text-light">Rewrite your infomation</p>  
                     <hr>
-                    <form class>
+                    <!-- <form class>
                         <div class="form-group-user d-flex justify-content-center">
-                            <i class="icon h3 bi bi-person-fill bg-light"></i>
+                            <i class="icon h3 bi bi-person-fill"></i>
                             <input type="text" class="form-control-user" id="username" placeholder="Enter your username">
                         </div>
                         <div class="form-group-user d-flex justify-content-center">
                             <i class="icon h4 fa fa-key"></i>
                             <input type="password" class="form-control-user" id="password" placeholder="Enter your password">
                         </div>
+                        <div class="form-group-user d-flex justify-content-center">
+                            <i class="icon h4 fa fa-key"></i>
+                            <input type="repass" class="form-control-user" id="repass" placeholder="Enter your password again">
+                        </div>
                         <div class="sbm d-flex justify-content-between">
-                            <div class="sbm-item form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                                <label class="form-check-label text-light" for="flexCheckChecked">
-                                    Remember me
-                                </label>
-                            </div>
+                            
                             <div class="sbm-item" style="padding-right: 10px;">
-                                <button type="submit" class="sbmLogin btn btn-warning text-dark">Login</button>
+                                <button type="submit" class="sbmOTP btn btn-warning text-dark">Send OTP</button>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
+
+                    <form method="post" action="forgot_password.php">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <button type="submit">Gửi</button>
+</form>
                     <hr>
                     <div class="end-form d-flex justify-content-center">
-                        Don't have an account? <a href="#" class="Sign-up text-warning"> Sign up </a>
+                        <a href="#" class="Send OTP text-warning"> Send OTP </a>
                     </div>
-                    <div class="end-form d-flex justify-content-center">
-                        
-                        <span class="repass text-warning">Forgot your password? </span>
-
-                    </div>
+                    <!-- <div class="end-form d-flex justify-content-center">
+                        <a href="">
+                            <span class="repass text-warning">Forgot your password? </span>
+                        </a> 
+                    </div> -->
                 </div>
             </div>
             

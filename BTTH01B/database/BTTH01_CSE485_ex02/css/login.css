@@ -1,0 +1,25 @@
+.form{
+    display: flex;
+    justify-content: center;
+}
+
+.form-login{
+    width: 100vh;
+    height: auto;
+    align-items: center;
+}
+
+.form-group-user{
+    width: 80%;
+    height: 2.7rem;
+    padding: 5px;
+}
+
+
+.form-control-user{
+    border-radius:0;
+    border:none;
+    border-end-end-radius: 0.3rem;
+    border-start-end-radius: 0.3rem;
+}
+

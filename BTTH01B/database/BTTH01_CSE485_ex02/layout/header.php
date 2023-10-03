@@ -7,7 +7,7 @@
 
             <div class="right-light">
                 <div class="form-searchs">
-                    <form class="form-group d-flex px-5 py-5">                      
+                    <form class="form-group d-flex px-2 py-5">                      
                         <input class="form-control" id="" placeholder="Nội dung cần tìm">
                         <a class="btn btn-outline-success" href="#" role="button">Tìm</a>
                     </form>
