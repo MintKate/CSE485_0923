@@ -1,9 +1,9 @@
 <ul class="nav ">
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Administration</a>
+                <a class="nav-link text-dark" href="../admin/index.php">Administration</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="../admin/index.php">Trang chủ</a>
+                <a class="nav-link text-dark" href="../index.php">Trang chủ</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="#">Trang ngoài</a>

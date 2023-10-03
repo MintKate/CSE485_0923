@@ -35,9 +35,11 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row ">
-            <div class="col-md-9 main">
-               
+        <?php include '../layout/nav-header.php'  ?>
+        
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-9 main ">
+            
                 <div class="main-content vh-100 p-3">
                     <h3 class=" text-center text-uppercase">User Management</h3>
                     <a href="user_add.php" class="btn btn-success"><i class="bi bi-person-add"></i> Add a New User</a>
