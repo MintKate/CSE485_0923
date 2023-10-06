@@ -10,14 +10,13 @@
     <link href="https://cdn.datatables.net/v/bs4/dt-1.13.6/datatables.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  
+    <!-- <link rel="stylesheet" href="css/toastr.min.css"> -->
 </head>
 <body>
 <?php include(APP_ROOT . "/app/views/Patient/navbar.php") ?>
     <div class="container">
         <h3 class="text-center text-upercase text-success my-3">QUẢN LÝ BỆNH NHÂN</h3>
         <a href="<?= DOMAIN . 'public/index.php?controller=patient&action=insertForm'?>" class="btn btn-success" style="margin-bottom: 15px">Thêm mới</a>
-       
        
         <table class="table" id="myTable">
           <thead>
@@ -65,6 +64,7 @@
                       </div>
                     </div>
                 </td>
+
               </tr>  
             <?php
               }
@@ -78,7 +78,15 @@
     </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/v/bs4/dt-1.13.6/datatables.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+<!-- <script src="js/toastr.min.js"></script> -->
+<!-- <script>
+  <?php //if(isset($_GET['action'])): ?>
+    toastr.success('Thêm thành công');
+    <?php //endif; ?>
 
+</script> -->
 <script>
     $(document).ready(function () {
       $('#myTable').DataTable({

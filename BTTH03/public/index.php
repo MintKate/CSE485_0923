@@ -27,9 +27,6 @@ if(isset($_GET['action']) && isset($_GET['controller'])){
         }
         // echo 'Có file';
     }else{
-        // require_once(APP_ROOT . "/app/controllers/ClassController.php");
-        // $ClassController = new ClassController();
-        // $ClassController->index();
          echo 'Không có file';
     }
 }else{
@@ -38,20 +35,5 @@ if(isset($_GET['action']) && isset($_GET['controller'])){
     $PatientController->index();
       //echo 'Không có action';
 }
-//    $homeController = new HomeController();
-//    $homeController->index();
-    // $controller = isset ($_GET['controller']) ?$_GET['controller']:'home';
-    // $action = isset ($_GET['action']) ?$_GET['action']:'index';
-    // if($controller=='home'){
-    //     require_once APP_ROOT. '/app/controllers/StudentControllers.php';
-    //     $studentController = new StudentControllers();
-    //     $studentController ->index();
 
-    // }else if($controller=='student'){
-    //     require_once APP_ROOT. '/app/controllers/StudentControllers.php';
-    //     $studentController = new StudentControllers();
-    //     $studentController->index();
-    // }else{
-    //     echo "Khong tồn tại URL";
-    // }
 ?>

@@ -12,7 +12,7 @@ require_once APP_ROOT.'/app/services/DoctorsService.php';
 class DoctorController {
     private $doctorService;
     public function __construct(){
-        // Gọi dữ liệu từ StudentService
+        // Gọi dữ liệu từ DoctorService
         $this->doctorService = new DoctorService(); 
     }
     public function index() {

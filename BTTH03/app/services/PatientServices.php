@@ -25,6 +25,8 @@ class PatientService{
             echo "Lỗi: " .$e->getMessage();
         }
     }
+
+
     public function getPatientById($id) {
         if (!$this->conn) {
             return false;
@@ -50,6 +52,56 @@ class PatientService{
         }
     }
 
+    // Thêm bệnh nhân
+    public function addNewPatient($tenBenhNhan) {
+        if (!$this->conn) {
+            return false;  
+        }               
+        try {
+            $sql = "INSERT INTO benhnhan(tenBenhNhan) VALUES (:tenBenhNhan)";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindParam(':tenBenhNhan', $tenBenhNhan);
+            $stmt->execute();
+            return true;
+        } catch (PDOException $e) {
+            echo "Lỗi truy vấn cơ sở dữ liệu: " . $e->getMessage();
+            return false; 
+        }
+    }
+//     //Sửa dữ liệu
+// public function editNewClass($id,$tenLop) {
+//     if (!$this->conn) {
+//         return false;
+//     }
 
+//     try {
+//         $sql = "UPDATE lop SET tenLop = :tenLop WHERE id = :id";
+//         $stmt = $this->conn->prepare($sql);
+//         $stmt->bindParam(':tenLop', $tenLop);
+//         $stmt->bindParam(':id', $id);
+//         $stmt->execute();
+//         return true;
+//     } catch (PDOException $e) {
+//         echo "Lỗi truy vấn cơ sở dữ liệu: " . $e->getMessage();
+//         return false;
+//     }
+// }
+// //Xoá dữ liệu
+// public function remoteNewClass($id){
+//     if(!$this->conn){
+//         return false;
+//     }
+
+//     try{
+//         $sql = "DELETE FROM lop WHERE id = :id";
+//         $stmt = $this->conn->prepare($sql);
+//         $stmt->bindParam(':id', $id);
+//         $stmt->execute();
+//         return true;
+//     }catch(PDOException $e){
+//         echo "Lỗi truy vấn cơ sở dữ liệu" . $e->getMessage();
+//         return false;
+//     }
+// }
 }
 ?>
