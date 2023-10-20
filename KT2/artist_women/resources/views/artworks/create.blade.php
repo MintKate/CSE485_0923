@@ -18,8 +18,13 @@
 
         <div class="form-group">
             <label for="art_type">Art type</label>
-            <input type="text" class="form-control"name="art_type"  placeholder="Hội họa, Văn Học, Âm nhạc">
+            <!-- <input type="text" class="form-control"name="art_type"  placeholder="Hội họa, Văn Học, Âm nhạc"> -->
             
+            <select name="art_type">
+                <option value="Hội họa">Hội họa</option>
+                <option value="Âm nhạc">Âm nhạc</option>
+                <option value="Văn học">Văn học</option>
+            </select>
         </div>
 
         <div class="form-group">

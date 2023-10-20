@@ -19,7 +19,11 @@
 
         <div class="form-group">
             <label for="art_type">Art type</label>
-            <input type="text" name="art_type" class="form-control" value="{{ $artwork->art_type }}"required>
+            <select name="art_type">
+                <option value="Hội họa" {{ $artwork->art_type == 'Hội họa' ? 'selected' : '' }}>Hội họa</option>
+                <option value="Âm nhạc" {{ $artwork->art_type == 'Âm nhạc' ? 'selected' : '' }}>Âm nhạc</option>
+                <option value="Văn học" {{ $artwork->art_type == 'Văn học' ? 'selected' : '' }}>Văn học</option>
+            </select>
         </div>
 
         <div class="form-group">
