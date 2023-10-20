@@ -27,11 +27,14 @@
                     <td>{{ $artwork->media_link}}</td>
                     <td>{{ $artwork->cover_image}}</td>
                     <td class="d-flex">
-                        <a href="{{ route('artworks.edit', $artwork->id) }}" class="btn btn-primary">
+                        <a href="{{ route('artworks.show', $artwork->id) }}" class="btn btn-primary ">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('artworks.edit', $artwork->id) }}" class="btn btn-primary mx-2">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </a>
                         
-                        <button type="button" class="btn btn-danger btn-sm mx-2" data-bs-toggle="modal" data-bs-target="#deleteModal-{{$artwork->id}}" >
+                        <button type="button" class="btn btn-danger btn-sm " data-bs-toggle="modal" data-bs-target="#deleteModal-{{$artwork->id}}" >
                             <i class="fa-solid fa-trash-can"></i>
                         </button>
                             <!-- Modal -->
